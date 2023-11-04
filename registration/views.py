@@ -15,7 +15,7 @@ def register(request):
             user = form.save()
             phone_number = form.cleaned_data['phone_number']
             generate_and_send_otp(request, user, phone_number)
-            return redirect('otp_verification')
+            return redirect('login')
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})

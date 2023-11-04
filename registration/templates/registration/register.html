@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        {{ form.username.label_tag }}<br>
+        {{ form.username }}<br><br>
+        
+        {{ form.password1.label_tag }}<br>
+        {{ form.password1 }}<br><br>
+        
+        {{ form.password2.label_tag }}<br>
+        {{ form.password2 }}<br><br>
+        
+        {{ form.phone_number.label_tag }}<br>
+        {{ form.phone_number }}<br><br>
+        
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
